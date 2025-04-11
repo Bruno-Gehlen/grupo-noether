@@ -1,2 +1,2 @@
 # noether-website
-website oficial do grupo Noether IFUSP
+Futuro website da entidade Grupo Noether IFUSP, ainda sob contrução...
