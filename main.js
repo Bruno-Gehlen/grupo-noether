@@ -4,7 +4,10 @@ console.log('Hello World!');
 window.addEventListener('DOMContentLoaded', function() {
   const container = document.getElementById('lorenz-gif-container');
   if (!container) return;
-  const width = 320, height = 320;
+  // Detect mobile and adjust canvas size and point count
+  const isMobile = window.innerWidth <= 700;
+  const width = isMobile ? 220 : 320, height = isMobile ? 220 : 320;
+  const steps = isMobile ? 2000 : 5000;
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
@@ -16,7 +19,6 @@ window.addEventListener('DOMContentLoaded', function() {
   // Lorenz parameters
   const sigma = 10, rho = 28, beta = 8/3;
   const dt = 0.008;
-  const steps = 5000;
   const totalTime = 5; // seconds
   const frames = 60 * totalTime;
   let points = [];
@@ -39,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
       '#000004','#1b0c41','#4a0c6b','#781c6d','#a52c60','#cf4446','#ed6925','#fb9b06','#f7d13d','#fcffa4'
     ];
     // Ajuste vertical para centralizar melhor o atrator
-    const yOffset = 180; // valor positivo move para baixo
+    const yOffset = isMobile ? 90 : 180; // valor positivo move para baixo
     for (let i = 1; i < points.length; i++) {
       let t = (i + frame * (points.length/frames)) % points.length;
       let prev = points[Math.floor((t-1+points.length)%points.length)];
