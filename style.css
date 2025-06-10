@@ -12,6 +12,29 @@
   --inferno-9: #fcffa4;
 }
 
+#sketch-holder {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -1;
+    overflow: hidden;
+    text-align: center;
+    display: table;
+}
+
+canvas {
+    margin: auto;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 700;
+    max-height: 700;
+    overflow: hidden;
+}
+
 body {
   font-family: 'Segoe UI', 'Arial', sans-serif;
   font-size: 15pt;
@@ -70,7 +93,7 @@ body {
 
 .hero {
   padding: 2rem 1rem 2rem 1rem;
-  background: #232326;
+  background: rgb(50, 50, 50, 0.8);
   border-radius: 0;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
@@ -88,8 +111,8 @@ body {
 .section {
   max-width: 900px;
   margin: 2.5rem auto;
-  background: #232326;
-  border-radius: 0;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 20px;
   padding: 2rem 1.5rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   text-align: left;

@@ -14,9 +14,14 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Lorentz attractor simulation --!>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
 </head>
 
-<body>
+<body> 
+  <div id="sketch-holder"></div>
+
   <header class="header">
     <div class="container">
       <span class="logo-bg">
@@ -34,6 +39,7 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section class="hero">
       <h1>Grupo Noether - IFUSP</h1>
@@ -85,12 +91,15 @@
       <p>Entre em contato pelo e-mail: <a href="mailto:gruponoether@if.usp.br">gruponoether@if.usp.br</a></p>
     </section>
   </main>
-  <div id="lorenz-gif-container" style="margin:2rem 0;"></div>
+
+  <!-- <div id="lorenz-gif-container" style="margin:2rem 0;"></div> --!>
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Grupo Noether - IFUSP. Todos os direitos reservados.</p>
     </div>
   </footer>
-  <script src="main.js"></script>
+  
+  <script src="sketch.js"></script>
+  <script src="point.js"></script>
 </body>
 </html>
