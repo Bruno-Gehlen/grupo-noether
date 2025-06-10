@@ -10,6 +10,11 @@
   --inferno-7: #fb9b06;
   --inferno-8: #f7d13d;
   --inferno-9: #fcffa4;
+
+  /* Cores da Nathalia */
+  --orange: #ed5027;
+  --pink: #a42764;
+  --purple: #7b1d6b;
 }
 
 #sketch-holder {
@@ -33,10 +38,11 @@ canvas {
     max-width: 700;
     max-height: 700;
     overflow: hidden;
+    opacity: 0.3;
 }
 
 body {
-  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-family: 'Coolvetica', 'Arial', sans-serif;
   font-size: 15pt;
   background: #18191a;
   color: #fff;
@@ -46,9 +52,10 @@ body {
 }
 
 .header {
-  background: #232326;
+  background: rgb(20, 20, 20, 0.0);
+  height: 50px;
   padding: 0.2rem 0;
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25); /* sombra mais visível */
+  /* box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25); /* sombra mais visível */
   position: relative;
   z-index: 10;
 }
@@ -61,8 +68,6 @@ body {
   padding: 0 2rem;
 }
 .logo-bg {
-  background: #dfdfdf;
-  border-radius: 16px;
   padding: 6px 7px;
   display: flex;
   align-items: center;
@@ -81,7 +86,7 @@ body {
   padding: 0;
 }
 .nav a {
-  color: var(--inferno-8);
+  color: var(--pink);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -91,34 +96,47 @@ body {
   color: var(--inferno-6);
 }
 
+.main-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.main-div__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero {
   padding: 2rem 1rem 2rem 1rem;
-  background: rgb(50, 50, 50, 0.8);
+  background: rgb(20, 20, 20, 0.0);
   border-radius: 0;
+  text-align: left;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
-  color: var(--inferno-8);
+  color: var(--pink);
 }
 .subtitle {
-  font-size: 1.3rem;
-  color: var(--inferno-7);
+  font-size: 1.0rem;
+  font-weight:bold;
+  color: var(--orange);
   margin-bottom: 0;
 }
 
 .section {
   max-width: 900px;
   margin: 2.5rem auto;
-  background: rgba(20, 20, 20, 0.9);
+  background: rgba(20, 20, 20, 0.4);
   border-radius: 20px;
   padding: 2rem 1.5rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   text-align: left;
+  text-justify: inter-word;
 }
 .section h2 {
-  color: var(--inferno-7);
+  color: var(--purple);
   margin-top: 0;
   text-align: center;
 }
@@ -129,7 +147,7 @@ body {
 }
 .footer {
   background: #18191a;
-  color: var(--inferno-7);
+  color: var(--purple);
   text-align: center;
   padding: 1.2rem 0 0.7rem 0;
   margin-top: 3rem;
@@ -138,7 +156,7 @@ body {
 }
 
 a, a:visited {
-  color: var(--inferno-8);
+  color: var(--pink);
   text-decoration: underline;
   transition: color 0.2s;
 }

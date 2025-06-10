@@ -22,15 +22,15 @@ function setup() {
 	// Populate array
 	pointsArray.push(new Point(
 		random(0.1, 0.7), random(0.1, 0.7), random(0.1, 0.7),
-		[100, 255, 100]));
+		[228, 178, 79]));
 
 	pointsArray.push(new Point(
 		random(0.1, 0.7), random(0.1, 0.7), random(0.1, 0.7),
-		[255, 100, 100]));
+		[123, 29, 107]));
 	
 	pointsArray.push(new Point(
 		random(0.1, 0.7), random(0.1, 0.7), random(0.1, 0.7),
-		[100, 100, 255]));
+		[237, 80, 39]));
     
     let time = 0.0;
     while (time < startTime)
@@ -44,7 +44,7 @@ function setup() {
 
 // Draw objects on canvas
 function draw() {
-	scale(5);
+	scale(10);
 	rotateY(angle);
 	background(0);
     
