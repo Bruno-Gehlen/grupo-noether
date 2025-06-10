@@ -36,7 +36,7 @@ function setup() {
     while (time < startTime)
     {
         for (let point of pointsArray) {
-	    	point.calcule();
+	    	point.calculate();
         }
         time += DT;
     }
@@ -49,17 +49,16 @@ function draw() {
 	background(0);
     
     let mid = createVector(0, 0, 0);
-    mid.sub(pointsArray[0].getLastVector());
-    mid.sub(pointsArray[1].getLastVector());
-    mid.sub(pointsArray[2].getLastVector());
+    mid.sub(pointsArray[0].getMidpoint())
+    mid.sub(pointsArray[1].getMidpoint())
+    mid.sub(pointsArray[2].getMidpoint())
     mid.div(3);
     translate(mid)
 
 	for (let point of pointsArray) {
-		point.calcule();
+		point.calculate();
 		point.show();
 	}
-    
 	
 	angle += 0.002;
 }
