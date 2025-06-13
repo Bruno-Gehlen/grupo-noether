@@ -1,2 +1,2 @@
-# noether-website
+# grupo-noether
 Futuro website da entidade Grupo Noether IFUSP, ainda sob contrução...
